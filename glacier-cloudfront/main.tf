@@ -25,7 +25,7 @@ resource "aws_cloudfront_cache_policy" "s3_caching_policy" {
 }
 
 module "cloudfront" {
-  source = "../../../tfmodules/cloudfront"
+  source = "../cloudfront"
 
   acm_certificate_arn            = var.acm_certificate_arn
   tags                           = var.tags
