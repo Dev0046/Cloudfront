@@ -45,14 +45,7 @@ module "cloudfront" {
   ordered_cache_behavior         = var.ordered_cache_behavior
   origin_group                   = var.origin_group
   logging_config                 = var.logging_config
-  s3_origin_config               = [
-    {
-      domain_name = "fc-fantasy-files.s3.ap-south-1.amazonaws.com"
-      origin_id   = "fc-fantasy-files"
-      origin_path = ""
-      # origin_access_identity_attachment removed
-    }
-  ]
+  s3_origin_config               = var.s3_origin_config
   enable                         = var.enable
   is_ipv6_enabled                = var.is_ipv6_enabled
   http_version                   = var.http_version
