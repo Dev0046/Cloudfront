@@ -16,7 +16,7 @@ dynamic "origin" {
     name                              = i.domain_name
     id                                = i.origin_id
     origin_access_identity_attachment = lookup(i, "origin_access_identity_attachment", false)
-    origin_access_control_attachment  = lookup(i, "origin_access_control_attachment", false)
+    origin_access_control_attachment  = i.origin_access_control_attachment
     path                              = lookup(i, "origin_path", "")
     custom_header                     = lookup(i, "custom_header", null)
   }]
